@@ -51,12 +51,18 @@ $( function() {
       const diffInDays = Math.round(diffInTime / oneDay)
     console.log('days passed', diffInDays)
 
+    //calculate the total number of months passed
     const totalMonth = (diffInDays / 30)
     console.log('totalMonth', totalMonth)
 
+    //calculate the total monthly charge
     const monthlyCharge = (totalMonth * monthlyRate).toFixed(2)
     console.log('monthlycharge', monthlyCharge)
     console.log('monthlyrate', monthlyRate)
 
+    //calculate the taxCharge of the total monthly rate
+    const taxCharge = (monthlyCharge * taxRate).toFixed(2);
+    console.log('taxrate', taxRate)
+    console.log('taxCharge', taxCharge)
       
   }
