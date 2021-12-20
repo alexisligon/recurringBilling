@@ -5,36 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recurring Billing</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  <script src="./index.js"></script>
   </head>
   <body>
     <h1>Recurring Billing Calculation</h1>
     <table>
-      <tr>
-        <td>
-          <input
-            type="text"
-            name="a"
-            id="first"
-            placeholder="Enter start date"
-          />
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <input
-            type="text"
-            name="b"
-            id="second"
-            placeholder="Enter end date"
-          />
-        </td>
-      </tr>
+        <tr>
+            Enter Date Range </tr><br>
+            <label for="from">From</label>
+            <input type="text" id="from" name="from">
+            <label for="to">to</label>
+            <input type="text" id="to" name="to">
+        </tr>
       <tr>
         <td>
           <input
             type="text"
             name="c"
-            id="third"
+            id="monthlyRate"
             placeholder="Enter monthly rate"
           />
         </td>
@@ -44,7 +36,7 @@
           <input
             type="text"
             name="c"
-            id="third"
+            id="taxRate"
             placeholder="Enter Tax Rate(%)"
           />
         </td>
@@ -60,7 +52,7 @@
         </td>
       </tr>
       <tr>
-        <td><button onclick="simple_interest()">Submit</button></td>
+        <td><button onclick="calculate()">Submit</button></td>
       </tr>
     </table>
   </body>
